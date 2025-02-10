@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="stylesheet" href="loading.css">
         <style>
             body
             {
@@ -25,7 +26,7 @@
                 padding: 5px;
                 margin-right: 3dvw;
             }
-            .navbar--li a
+            .navbar--ul a
             {
                 text-decoration: none;
                 color: white;
@@ -40,12 +41,21 @@
                 left: 0;    
                 height: 100dvh;
             }
-            .left-title-page img
+            .left-title-page .avatar--icon
             {
                 border-radius: 50%;
                 width: 30dvh;
                 height: 30dvh;
-                margin-top: 30dvh;
+                margin-top: 25dvh;
+            }
+            .left-title-page a
+            {
+                text-decoration: none;
+            }
+            .left-title-page .link--icon
+            {
+                width: 4dvh;
+                margin: 10px
             }
             .right-main-page
             {
@@ -54,35 +64,55 @@
                 width: 60%;
                 height: 100dvh;
             }
-            .content
+            .content iframe
             {
-                margin-top: 66.2;
-                padding: 5px;
+                margin-top: 72;
+                width: 95%;
+                height: 85dvh;
+                border-style: none;
+                z-index: 1;
+                position: relative;
             }
         </style>
     </head>
     <body>
         <div class="left-title-page">
-            <img src="https://avatars.githubusercontent.com/u/163871645?v=4">
+            <img class="avatar--icon" src="https://avatars.githubusercontent.com/u/163871645?v=4">
             <p></p>
             chickenlegyummy
             <p></p>
             Hiei / Akane / Bobby
+            <p></p>
+            <a href="https://github.com/chickenlegyummy">
+                <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"/>
+            </a>
+            <a href="https://www.linkedin.com/in/bobby-li-a713a8327/">
+                <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"/>
+            </a>
+            
+            <img title="Discord name: hieiuwu" class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png"/>
+            
         </div>
         <div class="right-main-page">
             <div class="navbar">
                 <ul class="navbar--ul">
-                    <li class="navbar--li"><a href="#">Home</a></li>
-                    <li class="navbar--li"><a href="#">About Me</a></li>
-                    <li class="navbar--li"><a href="#">Blog</a></li>
-                    <li class="navbar--li"><a href="#">LinkTree</a></li>
+                    <a target="content" href="Home/home.html"><li class="navbar--li">Home</li></a>
+                    <a target="content" href="Blog/blog.html"><li class="navbar--li">Blog</li></a>
+                    <a target="content" href="LinkTree/linktree.html"><li class="navbar--li">LinkTree</li></a>
                 </ul>
             </div>
             <div class="content">
-                hello world hello world hello world 
-                hello world hello world
-                hello world hello world hello world 
-                hello world 
+
+                <div class="loader-container">
+                    <div class="bouncing-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+
+                <iframe name="content" src="/Home/home.html"></iframe>
+                
             </div>
         </div>
     </body>

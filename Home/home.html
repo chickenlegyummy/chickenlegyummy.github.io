@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+            body{
+                font-family: "Yusei Magic", serif;
+                background-color: rgb(46, 42, 49);
+            }
+            .typewriter h1 {
+                color: #fff;
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                border-right: .15em solid rosybrown; /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                letter-spacing: .16em; /* Adjust as needed */
+                animation: 
+                    typing 3.5s steps(16, end),
+                    blink-caret .75s step-end infinite;
+            }
+
+            /* The typing effect */
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+            }
+
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: rosybrown; }
+            }
+        </style>
+    </head>
+    <body>
+        <div style="display: flex;">
+            <div class="typewriter">
+                <h1>Hi I am Hiei!</h1>
+            </div>
+        </div>
+    </body>
+</html>
