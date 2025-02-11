@@ -1,120 +1,46 @@
 <html>
     <head>
-        <link rel="stylesheet" href="loading.css">
-        <style>
-            body
-            {
-                margin: 0;
-                background-color: rgb(46, 42, 49);
-            }
-            .navbar
-            {
-                position: fixed;
-                width: 100%;
-                background-color: rgb(46, 42, 49);
-            }
-            .navbar--ul
-            {
-                display: flex;
-                list-style: none;
-                border-bottom: 1px white solid;
-                width: 50%;
-                padding-bottom: 5px;
-            }
-            .navbar--li
-            {
-                padding: 5px;
-                margin-right: 3dvw;
-            }
-            .navbar--ul a
-            {
-                text-decoration: none;
-                color: white;
-            }
-            .left-title-page
-            {
-                color: white;
-                position: fixed;
-                text-align: center;
-                width: 40%;
-                top: 0;
-                left: 0;    
-                height: 100dvh;
-            }
-            .left-title-page .avatar--icon
-            {
-                border-radius: 50%;
-                width: 30dvh;
-                height: 30dvh;
-                margin-top: 25dvh;
-            }
-            .left-title-page a
-            {
-                text-decoration: none;
-            }
-            .left-title-page .link--icon
-            {
-                width: 4dvh;
-                margin: 10px
-            }
-            .right-main-page
-            {
-                float: right;
-                color: white;
-                width: 60%;
-                height: 100dvh;
-            }
-            .content iframe
-            {
-                margin-top: 72;
-                width: 95%;
-                height: 85dvh;
-                border-style: none;
-                z-index: 1;
-                position: relative;
-            }
-        </style>
+        <link rel="stylesheet" href="src/index.css">
+        <link rel="stylesheet" href="src/typewrite.css">
+        <title>Hiei's House</title>
     </head>
     <body>
-        <div class="left-title-page">
-            <img class="avatar--icon" src="https://avatars.githubusercontent.com/u/163871645?v=4">
-            <p></p>
-            chickenlegyummy
-            <p></p>
-            Hiei / Akane / Bobby
-            <p></p>
-            <a href="https://github.com/chickenlegyummy">
-                <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"/>
-            </a>
-            <a href="https://www.linkedin.com/in/bobby-li-a713a8327/">
-                <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"/>
-            </a>
-            
-            <img title="Discord name: hieiuwu" class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png"/>
-            
+        
+        <div class="left-side-nav">
+            <ul style="--sibling-count: 4">
+                <li style="--sibling-index: 1">
+                    <a href="#home">Home</a>
+                </li>
+                <li style="--sibling-index: 2">
+                    <a href="#aboutme">About Me</a>
+                </li>
+                <li style="--sibling-index: 3">
+                    <a href="#">Repository</a>
+                </li>
+                <li style="--sibling-index: 4">
+                    <a href="#">Portal</a>
+                </li>
+            </ul>
         </div>
-        <div class="right-main-page">
-            
-            <div class="navbar">
-                <ul class="navbar--ul">
-                    <li class="navbar--li"><a href="Home/home.html" target="content_frame">Home</a></li>
-                    <li class="navbar--li"><a href="Blog/blog.html" target="content_frame">Blog</a></li>
-                    <li class="navbar--li"><a href="LinkTree/linktree.html" target="content_frame">LinkTree</a></li>
-                </ul>
-            </div>
-            <div class="content">
 
-                <div class="loader-container">
-                    <div class="bouncing-dots">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                </div>
+        <div class="home" id="home">
+            <h1>
+                Hi! I'm&nbsp;<span class="typewriter"></span>
+            </h1>
+            <p>A Computer Science Major <span style="color: #5e4e3e">/</span> Developer in Hong Kong</p>
+            <ul>
+                <li><a href="https://github.com/chickenlegyummy">
+                    <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"/>
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/bobby-li-a713a8327/">
+                    <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"/>
+                </a></li>
+                <li><img title="Discord name: hieiuwu" class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png"/></li>  
+            </ul>
+        </div>
 
-                <iframe src="Home/home.html" name="content_frame"></iframe>
-                
-            </div>
+        <div class="aboutme" id="aboutme">
+
         </div>
     </body>
-</html>
+</html> 

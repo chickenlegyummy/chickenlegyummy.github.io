@@ -1,0 +1,111 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+TC:wght@100&family=Pacifico&display=swap');
+
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    height: 3000px;
+    margin: 0;
+}
+.left-side-nav 
+{
+    left: 0;
+    top: 30dvh;
+    position: fixed;
+    display: flex;
+    font-family: "Pacifico", serif;
+    font-size: 20px;
+}
+.left-side-nav ul 
+{
+    list-style: disc ;
+    --arc: 5deg;
+  
+    @media (hover) and (prefers-reduced-motion: no-preference) {
+      &:has(li:nth-child(1):hover) {--target: 1}
+      &:has(li:nth-child(2):hover) {--target: 2}
+      &:has(li:nth-child(3):hover) {--target: 3}
+      &:has(li:nth-child(4):hover) {--target: 4}
+  
+      & > li {
+        transform-origin: -200% 50%;
+        transition: transform 2s var(--ease-spring-5), opacity 0.3s var(--ease-3);
+      }
+  
+      &:hover > li:not(:hover) {
+        --distance-from-target: abs(var(--sibling-index) - var(--target));
+        --distance-multiplier: var(--distance-from-target) * 15%; /* change 15% */
+        --gradual-fadeout: calc(100% - var(--distance-multiplier));
+        opacity: var(--gradual-fadeout);
+  
+        --angle: calc((var(--sibling-index) - var(--target)) * var(--arc));
+        transform: rotateZ(var(--angle));
+      }
+    }
+}
+.left-side-nav li
+{
+    padding-top: 30px;
+}
+.left-side-nav li::marker
+{
+    color: #5e4e3e;
+}
+.left-side-nav a
+{
+    background-color: #5e4e3e;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.home
+{
+    height: 100vh;
+    background-image: url(/public/home.webp);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+}
+.home h1
+{
+    margin-top: 30vh;
+    position: absolute;
+}
+
+.home p
+{
+    color: white;
+    font-size: 20px;
+    margin-top: 45vh;
+    margin-left: 20px;
+}
+
+.home ul
+{
+    margin-top: 53vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.home li
+{
+    margin-left: 30px;
+}
+.home img
+{
+    width: 2.5em;
+    transition: transform .2s;
+}
+
+.home img:hover
+{
+    transform: scale(1.5);
+}
