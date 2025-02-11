@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+body {
+    background: #182028;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: "Yusei Magic", serif;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    margin: 1rem 0 1rem 2rem;
+  }
+  
+  /* Typewriter effect 1 */
+  @keyframes typing {
+    0.0000%, 33.3488% { content: ""; }
+    1.1395%, 32.2093% { content: "H"; }
+    2.2791%, 31.0698% { content: "Hi"; }
+    3.4186%, 30.9302% { content: "Hie"; }
+    4.5581%, 29.7907% { content: "Hiei"; }
+    5.6977%, 28.6512% { content: "Hiei!"; }
+  
+    36.7674%, 66.2791% { content: ""; }
+    37.9070%, 65.1395% { content: "A"; }
+    38.0465%, 64.0000% { content: "Ak"; }
+    39.1860%, 63.8605% { content: "Aka"; }
+    40.3256%, 62.7209% { content: "Akan"; }
+    41.4651%, 61.5814% { content: "Akane"; }
+    42.6047%, 60.4419% { content: "Akane!"; }
+  
+    69.6977%, 99.2093% { content: ""; }
+    70.8372%, 98.0698% { content: "B"; }
+    71.9767%, 97.9302% { content: "Bo"; }
+    72.1163%, 96.7907% { content: "Bob"; }
+    73.2558%, 95.6512% { content: "Bobb"; }
+    74.3953%, 94.5116% { content: "Bobby"; }
+    75.5349%, 93.3721% { content: "Bobby!"; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+    color: lightblue;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: typing 13.5s infinite;
+  }
+  
+  .typewriter::after {
+    content: "";
+    margin-left: 2px;
+    border-right: 3px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  }
+  
+  .typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  .typewriter.nocaret::after {
+    border-right: 0;
+  }
+  
+  
+  @media (prefers-reduced-motion) {
+    .typewriter::after {
+      animation: none;
+    }
+    
+    @keyframes sequencePopup {
+      0%, 100% { content: "Hiei"; }
+      25% { content: "Akane"; }
+      50% { content: "Bobby"; }
+    }
+  
+    .typewriter::before {
+      content: "developer";
+      animation: sequencePopup 12s linear infinite;
+    }
+  }
+  
+  /**/
+  
