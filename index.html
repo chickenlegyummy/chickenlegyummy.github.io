@@ -1,6 +1,8 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="src/index.css">
+        <link rel="stylesheet" href="src/index_phone.css">
         <link rel="stylesheet" href="src/typewrite.css">
         <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
         <title>Hiei's House</title>
@@ -29,19 +31,52 @@
     </head>
     <body>
         
-        <div class="left-side-nav">
+        <div class="left-side-nav hideonphone">
             <ul style="--sibling-count: 4">
                 <li style="--sibling-index: 1">
-                    <a href="#home">Home</a>
+                    <a href="#home">
+                        <img src="public/home-icon.svg">
+                        Home</a>
                 </li>
                 <li style="--sibling-index: 2">
-                    <a href="#aboutme">About Me</a>
+                    <a href="#aboutme">
+                        <img src="public/user-profile-icon.svg">
+                        About Me</a>
                 </li>
                 <li style="--sibling-index: 3">
-                    <a href="#">Repository</a>
+                    <a href="#projects">
+                        <img src="public/folders-icon.svg">
+                        Projects</a>
                 </li>
                 <li style="--sibling-index: 4">
-                    <a href="#">Portal</a>
+                    <a href="#portal">
+                        <img src="public/internet-web-browser-icon.svg">
+                        Portal</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="side-left-bar">
+            <ul>
+                <li>
+                    <a href="#home">
+                        <img src="public/home-icon.svg">
+                        Home</a>
+                </li>
+                <li>
+                    <a href="#aboutme">
+                        <img src="public/user-profile-icon.svg">
+                        About Me</a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        <img src="public/folders-icon.svg">
+                        Projects</a>
+                </li>
+                <li>
+                    <a href="#portal">
+                        <img src="public/internet-web-browser-icon.svg">
+                        Portal</a>
                 </li>
             </ul>
         </div>
@@ -53,16 +88,22 @@
             <p>A Computer Science Major <span style="color: #5e4e3e">/</span> Developer in Hong Kong</p>
             <ul>
                 <li><a href="https://github.com/chickenlegyummy">
-                    <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"/>
+                    <img class="link--icon" src="public/github-icon.svg"/>
                 </a></li>
                 <li><a href="https://www.linkedin.com/in/bobby-li-a713a8327/">
-                    <img class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"/>
+                    <img class="link--icon" src="public/linkedin-icon.svg"/>
                 </a></li>
-                <li><img title="Discord name: hieiuwu" class="link--icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png"/></li>  
+                <li><img title="Discord name: hieiuwu" class="link--icon" src="public/discord-icon.svg"/></li>  
             </ul>
         </div>
 
         <div class="aboutme" id="aboutme">
+
+        </div>
+        <div class="projects" id="projects">
+
+        </div>
+        <div class="portal" id="portal">
 
         </div>
     </body>

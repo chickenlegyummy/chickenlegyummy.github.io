@@ -7,7 +7,7 @@ html
 }
 body
 {
-    height: 3000px;
+    height: 100vh * 3;
     margin: 0;
 }
 .left-side-nav 
@@ -57,21 +57,32 @@ body
 .left-side-nav a
 {
     background-color: #5e4e3e;
-    padding: 10px;
+    padding: 10px;  
     border-radius: 15px;
     text-decoration: none;
     color: white;
 }
 
-.home
+.left-side-nav a img
+{
+    width: 1em;
+    margin-left: 5px;
+    margin-right: 10px;
+    filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(75deg) brightness(110%) contrast(100%);
+}
+
+.home, .aboutme, .projects, .portal
 {
     height: 100vh;
-    background-image: url(/public/home.webp);
     background-size: cover;
     background-position: center;
-
     display: flex;
     justify-content: center;
+}
+
+.home
+{
+    background-image: url(/public/home.webp);
 }
 .home h1
 {
@@ -101,11 +112,22 @@ body
 }
 .home img
 {
-    width: 2.5em;
+    width: 3.6em;
     transition: transform .2s;
 }
-
 .home img:hover
 {
     transform: scale(1.5);
+}
+.aboutme
+{
+    background-color: white;
+}
+.projects
+{
+    background-color: wheat;
+}
+.portal
+{
+    background-color: yellow;
 }
