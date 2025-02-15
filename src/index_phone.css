@@ -66,5 +66,9 @@
     {
         display: none;
     }
+    .aboutme
+    {
+    height: 150vh;
+    }
 
 }

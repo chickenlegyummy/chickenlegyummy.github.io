@@ -9,6 +9,12 @@ body
 {
     height: 100vh * 3;
     margin: 0;
+    background-attachment: fixed;
+    background-image: url(/public/main_bg.png);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
 }
 .left-side-nav 
 {
@@ -18,6 +24,7 @@ body
     display: flex;
     font-family: "Pacifico", serif;
     font-size: 20px;
+    z-index: 2;
 }
 .left-side-nav ul 
 {
@@ -71,7 +78,7 @@ body
     filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(75deg) brightness(110%) contrast(100%);
 }
 
-.home, .aboutme, .projects, .portal
+.home, .aboutme, .portal
 {
     height: 100vh;
     background-size: cover;
@@ -119,15 +126,52 @@ body
 {
     transform: scale(1.5);
 }
-.aboutme
-{
-    background-color: white;
-}
-.projects
-{
-    background-color: wheat;
-}
 .portal
 {
-    background-color: yellow;
+    position: relative;
+}
+.portal .bottom
+{
+    padding-bottom: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(245, 222, 179, 0.459);
+    font-family: Georgia, serif;
+    color: white;
+}
+.aboutme
+{
+    background-color: wheat;
+    position: relative;
+    display: flex;
+}
+.aboutme .title-bar
+{
+    margin-top: 20px;
+    width: 100%;
+    position: absolute;
+}
+.aboutme .title-bar h1
+{
+    font-size: 3em;
+    color: #6b5642;
+    text-align: center;
+}
+.aboutme .content
+{
+    top: 110;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutme .content p
+{
+    width: 50vw;
+    text-align: left;
+    position: relative;
 }
