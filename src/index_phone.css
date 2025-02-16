@@ -37,7 +37,7 @@
 @media (max-width:800px){
     .home
     {
-        height: 100dvh;
+        height: 100vh;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -50,7 +50,7 @@
     }
     .home p
     {
-        margin-top:45dvh;
+        margin-top:45vh;
         font-size: 1em;
         width: 100%;
     }
@@ -68,16 +68,16 @@
     }
     .aboutme
     {
-        height: 180dvh;
+        height: 180vh;
     }
     .aboutme .title-bar
     {
-        margin-top: 1dvh;
+        margin-top: 1vh;
         position: absolute;
     }
     .aboutme .content
     {
-        margin-top: 5dvh;
+        margin-top: 5vh;
         position: absolute;
         font-size: 1rem;
     }
@@ -91,7 +91,7 @@
     }
     .aboutme .content
     {
-        margin-top: 5dvh;
+        margin-top: 5vh;
         position: absolute;
         font-size: 0.9rem;
     }
@@ -105,7 +105,7 @@
     }
     .aboutme .content
     {
-        margin-top: 8dvh;
+        margin-top: 8vh;
         position: absolute;
         font-size: 0.8rem;
     }
