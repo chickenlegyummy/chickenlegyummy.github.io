@@ -50,7 +50,7 @@
     }
     .home p
     {
-        margin-top:45vh;
+        margin-top:45dvh;
         font-size: 1em;
         width: 100%;
     }
@@ -68,7 +68,7 @@
     }
     .aboutme
     {
-        height: 150dvh;
+        height: 180dvh;
     }
     .aboutme .title-bar
     {
