@@ -35,6 +35,10 @@
     text-decoration: none;
 }
 @media (max-width:800px){
+    .body
+    {
+        background-size:contain;
+    }
     .home
     {
         height: 100dvh;
@@ -94,5 +98,19 @@
         margin-top: 5dvh;
         position: absolute;
         font-size: 0.9rem;
+    }
+}
+
+@media (max-height:550px)
+{
+    .aboutme
+    {
+        height: 200dvh;
+    }
+    .aboutme .content
+    {
+        margin-top: 8dvh;
+        position: absolute;
+        font-size: 0.8rem;
     }
 }
