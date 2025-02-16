@@ -35,6 +35,16 @@
     text-decoration: none;
 }
 @media (max-width:800px){
+    body
+    {
+        height: 100vh * 3;
+        margin: 0;
+        background-image: url(/public/main_bg.png);
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+    }
     .home
     {
         height: 100vh;
