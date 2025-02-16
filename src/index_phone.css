@@ -35,10 +35,6 @@
     text-decoration: none;
 }
 @media (max-width:800px){
-    .body
-    {
-        background-size:contain;
-    }
     .home
     {
         height: 100dvh;

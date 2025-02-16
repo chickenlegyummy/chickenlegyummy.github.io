@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="src/typewrite.css">
         <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
         <title>Hiei's House</title>
+        <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js">
+        </script>
 
         <!-- HTML Meta Tags -->
         <title>Hiei's House</title>
@@ -30,7 +33,13 @@
 
     </head>
     <body>
-        
+        <div class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">
+                Please wait, loading...
+            </div>
+        </div>
+        <div class="content">
         <div class="left-side-nav hideonphone">
             <ul style="--sibling-count: 3">
                 <li style="--sibling-index: 1">
@@ -122,10 +131,28 @@
             </div>
         </div>
         <div class="portal" id="portal">
+            <div class="content">
+                <ul>
+                    <li><a href="#">Hello World!</a></li>
+                    <li><a href="#">Hello World!</a></li>
+                    <li><a href="#">Hello World!</a></li>
+                    <li><a href="#">Hello World!</a></li>
+                    <li><a href="#">Hello World!</a></li>
+                    <li><a href="#">Hello World!</a></li>
+                </ul>
+            </div>
             <div class="bottom">
                 <p>&copy; 2025 <span style="font-weight: bold; color: wheat">Bobby Li</span>. All Rights Reserved</p>
                 This website is hosted by GitHub Pages
             </div>
         </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $(".content").fadeIn(2000);
+                }, 2000);
+            });
+        </script>
     </body>
 </html> 
