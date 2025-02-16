@@ -37,7 +37,7 @@
 @media (max-width:800px){
     .home
     {
-        height: 100vh;
+        height: 100dvh;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -68,7 +68,31 @@
     }
     .aboutme
     {
-    height: 150vh;
+        height: 150dvh;
     }
+    .aboutme .title-bar
+    {
+        margin-top: 1dvh;
+        position: absolute;
+    }
+    .aboutme .content
+    {
+        margin-top: 5dvh;
+        position: absolute;
+        font-size: 1rem;
+    }
+}
 
+@media (max-width:320px)
+{
+    .home h1
+    {
+        font-size: 2.5rem;
+    }
+    .aboutme .content
+    {
+        margin-top: 5dvh;
+        position: absolute;
+        font-size: 0.9rem;
+    }
 }
