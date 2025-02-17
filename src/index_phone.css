@@ -99,12 +99,27 @@
     {
         margin-top: 7em;
     }
+    .portal .content li
+    {
+        margin-top: 1em;
+    }
     .portal .content h1
     {
         top: 20px;
         position: absolute;
         text-decoration: underline;
     }
+    .loader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        z-index:3;
+        border: 4px solid wheat;
+        top: 45%;
+        left: 48%;
+        animation: loader 2s infinite ease;
+      }
 }
 
 @media (max-width:320px)
