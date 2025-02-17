@@ -190,13 +190,59 @@ body
 .portal .content ul 
 {
     list-style: none;
-    display: block;
 }
 
+.portal .content li
+{
+    padding: 1vw;
+    display: inline-block;
+}
 .portal .content a
 {
+    padding: 1vw;
+    color: white;
     text-decoration: none;
+    transition: 0.2s;
+
+    --border-angle: 0turn; 
+    --main-bg: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 5%,
+        #112 60%,
+        #213 95%
+        );
+  
+    border: solid 5px transparent;
+    border-radius: 1em;
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, orange, wheat 99%, transparent);
+    
+    background: 
+    
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box, 
+    var(--main-bg) border-box;
+  
+    background-position: center center;
+    animation: bg-spin 3s linear infinite;
+}
+@keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
 }
 
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+
+.portal .content a:hover
+{
+    animation-play-state: paused;
+    color: wheat;
+}
 
 
