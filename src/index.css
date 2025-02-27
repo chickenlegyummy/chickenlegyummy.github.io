@@ -165,7 +165,7 @@ body
 }
 .aboutme .title-bar
 {
-    margin-top: 15dvh;
+  padding: min(40dvw, 5%);
     position: absolute;
 }
 .aboutme .title-bar h1
