@@ -82,8 +82,8 @@
     }
     .aboutme .title-bar
     {
-        margin-top: 1vh;
         position: absolute;
+        padding: min(40dvw, 5%);
     }
     .aboutme .content
     {
