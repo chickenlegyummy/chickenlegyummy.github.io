@@ -1,18 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1.0, width=device-width">
-        <link rel="stylesheet" href="src/index.css">
-        <link rel="stylesheet" href="src/index_phone.css">
-        <link rel="stylesheet" href="src/typewrite.css">
-        <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
         <title>Hiei's House</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="src/styles.css">
+        <link rel="stylesheet" href="src/animations.css">
+        <link rel="stylesheet" href="src/typewrite.css">
+        <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+        
+        <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-        <!-- HTML Meta Tags -->
-        <title>Hiei's House</title>
+        <!-- Meta Tags -->
         <meta name="description" content="Hiei / Bobby / Akane - Home Page">
-
-        <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://chickenlegyummy.github.io/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Hiei's House">
@@ -26,124 +29,189 @@
         <meta name="twitter:title" content="Hiei's House">
         <meta name="twitter:description" content="Hiei / Bobby / Akane - Home Page">
         <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/62493aa9-eecc-420f-bc03-fae3949d40a9.png?token=hLqm_Nmi6cyPS26xYIIC4lZw0jbGJSF2sx6wXebhz4E&height=630&width=1200&expires=33275368523">
-
-        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
     </head>
     <body>
-        <div id="overlayer"></div>
-        <span class="loader">
-            <span class="loader-inner"></span>  
-        </span>
-        <div class="left-side-nav hideonphone">
+        <!-- Preloader -->
+        <div id="preloader">
+            <div class="loader-container">
+                <span class="loader">
+                    <span class="loader-inner"></span>  
+                </span>
+                <p class="loading-text">Loading<span class="dots">...</span></p>
+            </div>
+        </div>
+
+        <!-- Side Navigation (Desktop) -->
+        <nav class="left-side-nav hideonphone">
             <ul style="--sibling-count: 3">
                 <li style="--sibling-index: 1">
                     <a href="#home">
-                        <img src="public/home-icon.svg">
+                        <img src="public/home-icon.svg" alt="Home icon">
                         Home</a>
                 </li>
                 <li style="--sibling-index: 2">
                     <a href="#aboutme">
-                        <img src="public/user-profile-icon.svg">
+                        <img src="public/user-profile-icon.svg" alt="About icon">
                         About Me</a>
                 </li>
                 <li style="--sibling-index: 3">
                     <a href="#portal">
-                        <img src="public/internet-web-browser-icon.svg">
+                        <img src="public/internet-web-browser-icon.svg" alt="Portal icon">
                         Portal</a>
                 </li>
             </ul>
-        </div>
+        </nav>
 
-        <div class="side-left-bar">
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
             <ul>
                 <li>
                     <a href="#home">
-                        <img src="public/home-icon.svg">
+                        <img src="public/home-icon.svg" alt="Home icon">
                         Home</a>
                 </li>
                 <li>
                     <a href="#aboutme">
-                        <img src="public/user-profile-icon.svg">
+                        <img src="public/user-profile-icon.svg" alt="About icon">
                         About Me</a>
                 </li>
                 <li>
                     <a href="#portal">
-                        <img src="public/internet-web-browser-icon.svg">
+                        <img src="public/internet-web-browser-icon.svg" alt="Portal icon">
                         Portal</a>
                 </li>
             </ul>
-        </div>
+        </nav>
 
-        <div class="home" id="home">
-            <h1>
-                Hi! I'm&nbsp;<span class="typewriter"></span>
-            </h1>
-            <p>A Computer Science Major <span style="color: #5e4e3e">/</span> Developer in Hong Kong</p>
-            <ul>
-                <li><a target="_blank" href="https://github.com/chickenlegyummy">
-                    <img class="link--icon" src="public/github-icon.svg"/>
-                </a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/bobby-li-a713a8327/">
-                    <img class="link--icon" src="public/linkedin-icon.svg"/>
-                </a></li>
-                <li><img title="Discord name: hieiuwu" class="link--icon" src="public/discord-icon.svg"/></li>  
-            </ul>
-        </div>
+        <main>
+            <!-- Home Section -->
+            <section class="home section" id="home">
+                <div class="container">
+                    <h1 class="title reveal-up">
+                        Hi! I'm&nbsp;<span class="typewriter"></span>
+                    </h1>
+                    <p class="subtitle reveal-up">A Computer Science Major <span class="slash">/</span> Developer in Hong Kong</p>
+                    <ul class="social-links reveal-up">
+                        <li class="bounce-hover">
+                            <a target="_blank" href="https://github.com/chickenlegyummy">
+                                <img class="link--icon" src="public/github-icon.svg" alt="GitHub"/>
+                            </a>
+                        </li>
+                        <li class="bounce-hover">
+                            <a target="_blank" href="https://www.linkedin.com/in/bobby-li-a713a8327/">
+                                <img class="link--icon" src="public/linkedin-icon.svg" alt="LinkedIn"/>
+                            </a>
+                        </li>
+                        <li class="bounce-hover">
+                            <img title="Discord name: hieiuwu" class="link--icon" src="public/discord-icon.svg" alt="Discord"/>
+                        </li>  
+                    </ul>
+                </div>
+                <div class="scroll-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
 
-        <div class="aboutme" id="aboutme">
-            <div class="title-bar">
-                <h1><span style="border-bottom: #5e4e3e 2px solid;">About Me</span></h1>
-            </div>
+            <!-- About Me Section -->
+            <section class="aboutme section" id="aboutme">
+                <div class="section-inner">
+                    <div class="section-header scroll-animate">
+                        <h2>About Me</h2>
+                    </div>
 
-            <div class="content">
-                <p>
-                    Hi! I am Bobby Li, you may call me Hiei or Akane as well. 
-                    I am now studying Computer Science at PolyU and learning to become a
-                    passionate, responsible and skillful Developer. The areas that I focused the most on are Web Development and Game
-                    Development. So, I got various projects based on them and I can
-                    apply the knowledge I learned. 
-                </p>
+                    <div class="section-content">
+                        <div class="about-card scroll-animate">
+                            <p class="about-text">
+                                Hi! I am Bobby Li, you may call me Hiei or Akane as well. 
+                                I am now studying Computer Science at PolyU and learning to become a
+                                passionate, responsible and skillful Developer. The areas that I focused the most on are Web Development and Game
+                                Development. So, I got various projects based on them and I can
+                                apply the knowledge I learned. 
+                            </p>
+                        </div>
 
-                <p>
-                    <span style="font-weight: bold;">Web Development:</span> I learned TypeScript and different kinds
-                    of tools on JavaScript ecosystem such as Node.js and React. My goal is to become a
-                    fullstack developer, so I am proficient in both frontend and backend.
-                </p>
+                        <div class="about-card scroll-animate">
+                            <div class="card-icon"><i class="web-icon"></i></div>
+                            <div class="card-content">
+                                <p class="about-text">
+                                    <span class="highlight">Web Development:</span> I learned TypeScript and different kinds
+                                    of tools on JavaScript ecosystem such as Node.js and React. My goal is to become a
+                                    fullstack developer, so I am proficient in both frontend and backend.
+                                </p>
+                            </div>
+                        </div>
 
-                <p>
-                    <span style="font-weight: bold;">Game Development:</span>
-                    As an experienced Gamer since I was a child, making my own game 
-                    is a dream to me. Currently, I got game projects that made with Unity using C#.
-                    The final goal here is to make my own RPG or MMO game, which is real game that fulfilled
-                    what a gamer truly desired. 
-                </p>
+                        <div class="about-card scroll-animate">
+                            <div class="card-icon"><i class="game-icon"></i></div>
+                            <div class="card-content">
+                                <p class="about-text">
+                                    <span class="highlight">Game Development:</span>
+                                    As an experienced Gamer since I was a child, making my own game 
+                                    is a dream to me. Currently, I got game projects that made with Unity using C#.
+                                    The final goal here is to make my own RPG or MMO game, which is real game that fulfilled
+                                    what a gamer truly desired. 
+                                </p>
+                            </div>
+                        </div>
 
-                <p>
-                    <span style="font-weight: bold;">Casual Stuffs:</span> I love anime, music and games, so find me on Discord.
-                    I will 1v1 you on osu! or maybe LoL. I usually watch some 日常番 like ぼっち・ざ・ろっく！and K-ON!, they are really good shows. <span style="font-weight: bold;">Discord uid: hieiuwu</span>
-                </p>
-            </div>
-        </div>
-        <div class="portal" id="portal">
-            <div class="content">
-                <h1>Portal</h1>
-                <ul>
-                    <li><a target="_blank" href="https://chickenlegyummy.github.io/PolyuPortal/">PolyU Portal</a></li>
-                    <li><a target="_blank" href="https://github.com/chickenlegyummy/CCIT4078-Information-Technology-FYP">CCIT4078 Project</a></li>
-                    <li><a target="_blank" href="https://github.com/chickenlegyummy/Web-YTDLer">Youtube Downloader</a></li>
-                </ul>
-            </div>
-            <div class="bottom">
-                <p>&copy; 2025 <span style="font-weight: bold; color: wheat">Bobby Li</span>. All Rights Reserved</p>
-                This website is hosted by GitHub Pages
-            </div>
-        </div>
-        <script>
-            $(window).on('load', function() {
-                $(".loader").delay(2000).fadeOut("slow");
-                $("#overlayer").delay(2000).fadeOut("slow");
-            })
-        </script>
+                        <div class="about-card scroll-animate">
+                            <div class="card-icon"><i class="casual-icon"></i></div>
+                            <div class="card-content">
+                                <p class="about-text">
+                                    <span class="highlight">Casual Stuffs:</span> I love anime, music and games, so find me on Discord.
+                                    I will 1v1 you on osu! or maybe LoL. I usually watch some 日常番 like ぼっち・ざ・ろっく！and K-ON!, they are really good shows. <span class="highlight">Discord uid: hieiuwu</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portal Section -->
+            <section class="portal section" id="portal">
+                <div class="section-inner">
+                    <div class="section-header scroll-animate">
+                        <h2>Portal</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="portal-container">
+                            <div class="portal-card scroll-animate">
+                                <a target="_blank" href="https://chickenlegyummy.github.io/PolyuPortal/">
+                                    <div class="card-content">
+                                        <div class="card-overlay"></div>
+                                        <h3>PolyU Portal</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portal-card scroll-animate">
+                                <a target="_blank" href="https://github.com/chickenlegyummy/CCIT4078-Information-Technology-FYP">
+                                    <div class="card-content">
+                                        <div class="card-overlay"></div>
+                                        <h3>CCIT4078 Project</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portal-card scroll-animate">
+                                <a target="_blank" href="https://github.com/chickenlegyummy/Web-YTDLer">
+                                    <div class="card-content">
+                                        <div class="card-overlay"></div>
+                                        <h3>Youtube Downloader</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom scroll-animate">
+                        <p>&copy; 2025 <span class="author-name">Bobby Li</span>. All Rights Reserved</p>
+                        <p class="hosting-text">This website is hosted by GitHub Pages</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- JavaScript -->
+        <script src="main.js"></script>
     </body>
-</html> 
+</html>

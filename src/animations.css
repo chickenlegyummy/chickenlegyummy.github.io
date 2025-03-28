@@ -1,0 +1,186 @@
+/* Basic animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes dotPulse {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes scrollAnim {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+/* Loading animation for dots */
+.dots::after {
+    content: '.';
+    animation: dotAnimation 1.5s infinite;
+}
+
+@keyframes dotAnimation {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+/* Scroll animations */
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.aboutme .scroll-animate {
+    transform: translateY(50px);
+}
+
+.portal .scroll-animate {
+    transform: translateY(50px);
+}
+
+/* Sequential animation for cards */
+.about-card.scroll-animate:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.about-card.scroll-animate:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.about-card.scroll-animate:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.about-card.scroll-animate:nth-child(5) {
+    transition-delay: 0.8s;
+}
+
+.portal-card.scroll-animate:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.portal-card.scroll-animate:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.portal-card.scroll-animate:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+.scroll-animate.show-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reveal animations */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.reveal-up:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.reveal-up:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Left side navigation animation */
+.left-side-nav {
+    animation: fadeInLeft 1s ease 0.5s forwards;
+    opacity: 0;
+}
+
+/* Preloader animations */
+@keyframes loader {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(180deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes loader-inner {
+    0% { height: 0%; }
+    25% { height: 0%; }
+    50% { height: 100%; }
+    75% { height: 100%; }
+    100% { height: 0%; }
+}
+
+/* Hover animations */
+.bounce-hover {
+    transition: transform 0.2s ease;
+}
+
+.bounce-hover:hover {
+    transform: scale(1.2);
+}
