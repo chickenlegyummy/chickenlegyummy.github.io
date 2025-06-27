@@ -93,7 +93,7 @@
 /* Scroll animations */
 .scroll-animate {
     opacity: 0;
-    transition: opacity 1.4s ease, transform 1.4s ease;
+    transition: opacity 1.6s ease, transform 1.6s ease;
 }
 
 .aboutme .scroll-animate {
@@ -137,6 +137,9 @@
 }
 .portal-card.scroll-animate:nth-child(5) {
     transition-delay: 1s;
+}
+.portal-card.scroll-animate:nth-child(6) {
+    transition-delay: 1.2s;
 }
 
 .scroll-animate.show-element {
